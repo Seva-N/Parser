@@ -9,15 +9,16 @@ import time
 
 
 search = str(input('Поиск: '))
-data = ' ' + str(d.date.today())
+data = '-' + str(d.date.today())
+search = search.replace(' ', '_')
 
-FILE_g = search + ' google' + data + '.csv'
-FILE_y = search + ' yandex' + data + '.csv'
+FILE_g = search + '-' + 'google' + data + '.csv'
+FILE_y = search + '-' + 'yandex' + data + '.csv'
 
-FILE_g_js = 'json/' + search + ' google' + data + '.json'
-FILE_y_js = 'json/' + search + ' yandex' + data + '.json'
+FILE_g_js = 'json/' + search + '-' + 'google' + data + '.json'
+FILE_y_js = 'json/' + search + '-' + 'yandex' + data + '.json'
 
-search_ = search.replace(' ', '+')
+search_ = search.replace('_', '+')
 URL_g = 'https://www.google.com/search?q=' + search_ + '&&start='
 URL_y = 'https://www.yandex.ru/search/?clid=2186620&text=' + search_ +'&lr=54&p='
 HEADERS = {'user-agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:84.0)\
