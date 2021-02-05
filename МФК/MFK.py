@@ -9,7 +9,7 @@ import time
 import re
 
 URL = 'https://lk.msu.ru/course?page='
-data = ' ' + str(d.date.today())
+data = '-' + str(d.date.today())
 
 FILE = 'МФК' + data + '.csv'
 FILE_js = 'МФК' + data + '.json'
